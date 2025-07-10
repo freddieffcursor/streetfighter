@@ -1,54 +1,58 @@
 import "./App.css";
-import Ryu from "../src/images/Ryu.jpg";
-import RyuGif from "../src/images/Ryu.gif";
-import hadoukenGif from "../src/images/Ryu-Radouken.gif";
-import shoryukenGif from "../src/images/Ryu-Shoryuken.gif";
-import tatsumakiSenpukyakuGif from "../src/images/Ryu-TatsumakiSenpukyaku.gif";
-import spinningPileDriverGif from "../src/images/Zangief-SpinningPiledriver.gif";
-import doubleLariatGif from "../src/images/Zangief-DoubleZariat.gif";
-import banishingFlatGif from "../src/images/Zangief-BanishingFlat.gif";
-import hyakuretsukyakuGif from "../src/images/Chunli-Hyakuretsukyaku.gif";
-import spinningBirdKickGif from "../src/images/Chunli-SpinningBirdKick.gif";
-import kikokenGif from "../src/images/Chunli-Kikoken.gif";
-import eletricThunderGif from "../src/images/Blanka-ElectricThunder.gif";
-import rollingAtackGif from "../src/images/Blanka-RollingAttack.gif";
-import verticalRollGif from "../src/images/Blanka-VerticalRoll.gif";
-import sonicBoomGif from "../src/images/Guile-EletronicBoom.gif";
-import flashKickGif from "../src/images/Guile-FlashKick.webp";
-import yogaFireGif from "../src/images/Dhalsim-YogaFire.gif";
-import yogaTeleportGif from "../src/images/Dhalsim-YogaTeleport.gif";
-import yogaDrillGif from "../src/images/Dhalsim-YogaDrill.gif";
-import spiralArrowGif from "../src/images/Cammy-SpiralArrow.gif";
-import hundredHandGif from "../src/images/Ehonda-HundredSlap.gif";
-import sumoHeadbuttGif from "../src/images/Ehonda-SumoHead.gif";
-import sumoSmashGif from "../src/images/Ehonda-SumoSmash.gif";
-import zankuHadokenGif from "../src/images/Akuma-ZankuHadoken.gif";
-import shakunetsuHadokenGif from "../src/images/Akuma-ShakunetsuHadoken.gif";
-import goukiSatsuGif from "../src/images/Akuma-GoukiSatsu.gif";
-import kenHadoukenGif from "../src/images/Ken-Radouken.gif";
-import kenShoryukenGif from "../src/images/Ken-Shoryuken.gif";
-import kenTatsumakiSenpukyakuGif from "../src/images/Ken-TatsumakiSenpukyaku.gif";
-
-import Ehonda from "../src/images/Ehonda.jpg";
-import EhondaGif from "../src/images/Ehonda.gif";
-import ChunLi from "../src/images/ChunLi.jpg";
-import ChunLiGif from "../src/images/Chunli.gif";
-import Ken from "../src/images/Ken.jpg";
-import KenGif from "../src/images/Ken.gif";
-import Guile from "../src/images/Guile.jpg";
-import GuileGif from "../src/images/Guile.gif";
-import Dhalsim from "../src/images/Dhalsim.jpg";
-import DhalsimGif from "../src/images/Dhalsim.gif";
-import Zangief from "../src/images/Zangief.jpg";
-import ZangiefGif from "../src/images/Zangief.gif";
-import Blanka from "../src/images/Blanka.jpg";
-import BlankaGif from "../src/images/Blanka.gif";
-import Akuma from "../src/images/Akuma.jpg";
-import AkumaGif from "../src/images/AkumaGif.gif";
 import { useState, useEffect } from "react";
+
+// Character images
+import Ryu from "./images/Ryu.jpg";
+import RyuGif from "./images/Ryu.gif";
+import Ehonda from "./images/Ehonda.jpg";
+import EhondaGif from "./images/Ehonda.gif";
+import ChunLi from "./images/ChunLi.jpg";
+import ChunLiGif from "./images/Chunli.gif";
+import Ken from "./images/Ken.jpg";
+import KenGif from "./images/Ken.gif";
+import Guile from "./images/Guile.jpg";
+import GuileGif from "./images/Guile.gif";
+import Dhalsim from "./images/Dhalsim.jpg";
+import DhalsimGif from "./images/Dhalsim.gif";
+import Zangief from "./images/Zangief.jpg";
+import ZangiefGif from "./images/Zangief.gif";
+import Blanka from "./images/Blanka.jpg";
+import BlankaGif from "./images/Blanka.gif";
+import Akuma from "./images/Akuma.jpg";
+import AkumaGif from "./images/AkumaGif.gif";
+
+// Special move gifs
+import hadoukenGif from "./images/Ryu-Radouken.gif";
+import shoryukenGif from "./images/Ryu-Shoryuken.gif";
+import tatsumakiSenpukyakuGif from "./images/Ryu-TatsumakiSenpukyaku.gif";
+import spinningPileDriverGif from "./images/Zangief-SpinningPiledriver.gif";
+import doubleLariatGif from "./images/Zangief-DoubleZariat.gif";
+import banishingFlatGif from "./images/Zangief-BanishingFlat.gif";
+import hyakuretsukyakuGif from "./images/Chunli-Hyakuretsukyaku.gif";
+import spinningBirdKickGif from "./images/Chunli-SpinningBirdKick.gif";
+import kikokenGif from "./images/Chunli-Kikoken.gif";
+import eletricThunderGif from "./images/Blanka-ElectricThunder.gif";
+import rollingAtackGif from "./images/Blanka-RollingAttack.gif";
+import verticalRollGif from "./images/Blanka-VerticalRoll.gif";
+import sonicBoomGif from "./images/Guile-EletronicBoom.gif";
+import flashKickGif from "./images/Guile-FlashKick.webp";
+import yogaFireGif from "./images/Dhalsim-YogaFire.gif";
+import yogaTeleportGif from "./images/Dhalsim-YogaTeleport.gif";
+import yogaDrillGif from "./images/Dhalsim-YogaDrill.gif";
+import spiralArrowGif from "./images/Cammy-SpiralArrow.gif";
+import hundredHandGif from "./images/Ehonda-HundredSlap.gif";
+import sumoHeadbuttGif from "./images/Ehonda-SumoHead.gif";
+import sumoSmashGif from "./images/Ehonda-SumoSmash.gif";
+import zankuHadokenGif from "./images/Akuma-ZankuHadoken.gif";
+import shakunetsuHadokenGif from "./images/Akuma-ShakunetsuHadoken.gif";
+import goukiSatsuGif from "./images/Akuma-GoukiSatsu.gif";
+import kenHadoukenGif from "./images/Ken-Radouken.gif";
+import kenShoryukenGif from "./images/Ken-Shoryuken.gif";
+import kenTatsumakiSenpukyakuGif from "./images/Ken-TatsumakiSenpukyaku.gif";
 
 const characters = [
   {
+    id: 1,
     name: "Ryu",
     description:
       "A disciplined martial artist seeking to become a true warrior. Trained in Ansatsuken, he travels to test his skills and find opponents.",
@@ -57,6 +61,7 @@ const characters = [
     skills: ["Hadouken", "Shoryuken", "Tatsumaki Senpukyaku"],
   },
   {
+    id: 2,
     name: "Ken",
     description:
       "Ryu's charismatic best friend and sparring partner. A talented martial artist known for the powerful Shoryuken and flaming attacks.",
@@ -65,6 +70,7 @@ const characters = [
     skills: ["Shoryuken", "Hadouken", "Tatsumaki Senpukyaku"],
   },
   {
+    id: 3,
     name: "Chun-Li",
     description:
       "An Interpol officer skilled in Chinese martial arts. Seeks justice for her father's death and battles the criminal organization Shadaloo.",
@@ -73,6 +79,7 @@ const characters = [
     skills: ["Spinning Bird Kick", "Hyakuretsukyaku", "Kikoken"],
   },
   {
+    id: 4,
     name: "Guile",
     description:
       "A skilled Air Force officer seeking revenge for his friend Charlie Nash's death. Known for his iconic flattop and Sonic Boom move.",
@@ -81,6 +88,7 @@ const characters = [
     skills: ["Sonic Boom", "Flash Kick"],
   },
   {
+    id: 5,
     name: "Dhalsim",
     description:
       "A yoga master from India with the ability to stretch his limbs and control fire. Enters the World Warrior tournament to raise money for his village.",
@@ -89,6 +97,7 @@ const characters = [
     skills: ["Yoga Fire", "Yoga Teleport", "Yoga Drill Kick"],
   },
   {
+    id: 6,
     name: "Zangief",
     description:
       "A Russian professional wrestler known for immense strength and grappling techniques. His Spinning Piledriver is a force to be reckoned with.",
@@ -97,6 +106,7 @@ const characters = [
     skills: ["Spinning Piledriver", "Banishing Flat", "Double Lariat"],
   },
   {
+    id: 7,
     name: "Blanka",
     description:
       "Originally named Jimmy, Blanka was transformed into a feral creature with green skin and electric powers after a plane crash. Protects his homeland with unique abilities.",
@@ -105,14 +115,16 @@ const characters = [
     skills: ["Electric Thunder", "Rolling Attack", "Vertical Roll"],
   },
   {
+    id: 8,
     name: "Akuma",
     description:
       "A powerful martial artist consumed by the Satsui no Hado, seeking to become the ultimate warrior. Known for devastating techniques like the Raging Demon.",
     img: Akuma,
-    gif: AkumaGif, // Replace with the actual image for Akuma
+    gif: AkumaGif,
     skills: ["Gouki Satsu", "Shakunetsu Hadouken", "Zanku Hadoken"],
   },
   {
+    id: 9,
     name: "Ehonda",
     description:
       "A sumo wrestler from Japan, E. Honda joins the World Warrior tournament to showcase the strength of sumo globally. Surprisingly agile with powerful sumo techniques.",
@@ -183,7 +195,6 @@ function App() {
 
   useEffect(() => {
     handleSkillGif(power);
-    console.log(selectedSkill);
   }, [power, selectedSkill]);
 
   function handleSkillGif(power) {
@@ -209,7 +220,7 @@ function App() {
           }}
         >
           {characters.map((character) => (
-            <Card character={character} onSelectCard={handleSelectCard} />
+            <Card key={character.id} character={character} onSelectCard={handleSelectCard} />
           ))}
         </div>
       </div>
@@ -227,7 +238,7 @@ function App() {
 function Card({ character, onSelectCard }) {
   return (
     <div className="col-md-4 mb-4" onClick={() => onSelectCard(character)}>
-      <img src={character.img} className="card-img-top card-img" alt="street" />
+      <img src={character.img} className="card-img-top card-img" alt={character.name} />
     </div>
   );
 }
@@ -238,7 +249,6 @@ function Details({
   skills,
   handlePower,
   power,
-  selectedSkill,
 }) {
   return (
     <div className="conatiner row details">
@@ -255,13 +265,13 @@ function Details({
           <img
             className="bd-placeholder-img card-img-top"
             src={choosedCard.gif}
-            alt="animated gifs"
+            alt={`${choosedCard.name} animated`}
           />
         ) : (
           <img
             className="bd-placeholder-img card-img-top"
             src={powers[power]}
-            alt="animated gifs hu hu hu"
+            alt={`${power} special move`}
           />
         )}
         <div className="card-body">
@@ -275,8 +285,9 @@ function Details({
             </p>
           ) : (
             <>
-              {choosedCard.skills.map((skill) => (
+              {choosedCard.skills.map((skill, index) => (
                 <p
+                  key={index}
                   className="skills"
                   onClick={() => handlePower(skill, choosedCard.name)}
                 >
